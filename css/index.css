@@ -1,49 +1,67 @@
-body{
-  font-family: 'Work Sans', sans-serif;
-  background: #005AA7; 
-  
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-image: url("../img/land.jpg");
-}
-
-.main{
-	font-family: 'Work Sans', sans-serif;
-	background: #005AA7; 
-  background: -webkit-linear-gradient(to right, #FFFDE4, #005AA7);   
-  background: linear-gradient(to right, #FFFDE4, #005AA7); 
-
-}
-
-.menu{
-	position: fixed;
-	width: 100%;
-	margin-top: 90vh;
-
-}
-.menu2{
-  position: fixed;
+html,
+body {
+  margin: 0;
   width: 100%;
-  margin-top: 10vh;
-
+  height: 100%;
+  font-family: "Work Sans", sans-serif;
+  background-size: contain;
+  background: #005aa7;
+  background: -webkit-linear-gradient(to right, #fffde4, #005aa7);
+  background: linear-gradient(to right, #fffde4, #005aa7);
+  z-index: -4;
 }
 
-.icon{
-	margin-bottom: -7px;
-	max-width: 25px;
-	opacity: 0.8;
-	padding-left: 6px;
-	padding-right: 6px;
+
+.sect {
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  text-align: center;
 }
 
-.icon:hover{
-	opacity: 0.6;
+.sectOne {
+  background-image: url("../img/land.jpg");
+  background-position: center;
 }
-nav{
-  left:50%;
-  margin-left:-35px; /*change this value to move, more negative = more left*/
+
+.about {
+  padding-top: 80px;
+  color: #fff;
+  margin-right: 20%;
+  margin-left: 20%;
+}
+
+.menu {
+  position: fixed;
+  text-align: center;
+  margin-top: -5%;
+  left: 50%;
+  margin-left: -100px;
+}
+.menu2 {
+  position: absolute;
+  text-align: center;
+  margin-top: 30px;
+  left: 50%;
+  margin-left: -100px;
+}
+
+.icon {
+  margin-bottom: -7px;
+  max-width: 25px;
+  opacity: 0.8;
+  padding-left: 6px;
+  padding-right: 6px;
+}
+
+.icon:hover {
+  opacity: 0.6;
+}
+
+nav {
+  left: 50%;
+  margin-left: -35px; /*change this value to move, more negative = more left*/
 }
 li {
   list-style: none;
@@ -51,22 +69,115 @@ li {
 nav ul {
   text-align: center;
   margin: 0;
-  
   list-style: none;
 }
 nav li {
   display: inline-block;
-
-
-
 }
 nav a {
-  color: #FFF;
+  color: #fff;
   text-decoration: none;
   text-transform: uppercase;
   font-size: 14px;
 }
 
 nav a:hover {
-  color: #AAA;
+  color: #aaa;
+}
+
+.subMenu {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 20px;
+  font-size: 12px;
+  color: grey;
+  padding-left: 16px;
+}
+
+a {
+  padding-left: 4px;
+  padding-right: 4px;
+  color: white;
+  text-decoration: none;
+}
+
+a:hover {
+  color: grey;
+}
+.photoDiv {
+  margin-top: 100px;
+  display: inline-flex;
+  width: 70%;
+  margin-left: 15%;
+  margin-right: 15%;
+}
+.column {
+  display: inline-flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.aboutRight {
+  width: 40%;
+  text-align: center;
+}
+.aboutLeft {
+  width: 60%;
+  padding-bottom: 30px;
+}
+.rightCol {
+  display: flex;
+  flex-direction: column;
+  width: 33%;
+}
+.midCol {
+  display: flex;
+  flex-direction: column;
+  width: 33%;
+}
+.leftCol {
+  display: flex;
+  flex-direction: column;
+  width: 33%;
+}
+
+.photo {
+  max-width: 100%;
+  padding: 4px;
+  -webkit-transition: transform 2s; / For Safari 3.1 to 6.0 /
+  transition: transform 2s;
+}
+/*.photo:hover {
+  transform: scale(1.0);
+  z-index: 100;
+}*/
+
+.albumPhoto {
+  max-width: 100%;
+  padding: 4px;
+}
+
+h4,
+p {
+  margin-bottom: -11px;
+}
+
+@media screen and (max-width: 400px) {
+  .photoDiv,
+  .column {
+    flex-direction: column;
+
+    justify-content: center;
+  }
+  .aboutRight,
+  .aboutLeft,
+  .rightCol,
+  .midCol,
+  .leftCol {
+    width: 100%;
+  }
+  .photo {
+    padding-top: 5px;
+  }
 }
