@@ -156,6 +156,8 @@ a:hover {
 .albumPhoto {
   max-width: 100%;
   padding: 4px;
+  -webkit-transition: transform 2s; / For Safari 3.1 to 6.0 /
+  transition: transform 2s;
 }
 
 h4,
